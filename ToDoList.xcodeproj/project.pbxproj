@@ -30,6 +30,12 @@
 		CF7B77F52BAC2B500029AE9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77F42BAC2B500029AE9B /* LoginViewModel.swift */; };
 		CF7B77F72BAC2B630029AE9B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77F62BAC2B630029AE9B /* RegisterViewModel.swift */; };
 		CF7B77F92BAC2B720029AE9B /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77F82BAC2B720029AE9B /* ToDoListItemViewModel.swift */; };
+		CF7B77FB2BAC2F900029AE9B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77FA2BAC2F900029AE9B /* HeaderView.swift */; };
+		CF7B77FE2BAC396F0029AE9B /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77FD2BAC396F0029AE9B /* TLButton.swift */; };
+		CF7B78002BAC87C10029AE9B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B77FF2BAC87C10029AE9B /* Extentions.swift */; };
+		CF7B78022BAC8E360029AE9B /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B78012BAC8E360029AE9B /* AuthenticationService.swift */; };
+		CF7B78052BAC8F090029AE9B /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B78042BAC8F090029AE9B /* FirebaseAuthenticationService.swift */; };
+		CF7B78072BAC901F0029AE9B /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B78062BAC901F0029AE9B /* MockAuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		CF7B77F42BAC2B500029AE9B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CF7B77F62BAC2B630029AE9B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CF7B77F82BAC2B720029AE9B /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
+		CF7B77FA2BAC2F900029AE9B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CF7B77FD2BAC396F0029AE9B /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		CF7B77FF2BAC87C10029AE9B /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		CF7B78012BAC8E360029AE9B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		CF7B78042BAC8F090029AE9B /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
+		CF7B78062BAC901F0029AE9B /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 		CF7B77D82BAC293E0029AE9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF7B77FC2BAC2FB50029AE9B /* Subviews */,
 				CF7B77C32BAC22C30029AE9B /* MainView.swift */,
 				CF7B77DC2BAC2A100029AE9B /* ProfileView.swift */,
 				CF7B77DE2BAC2A230029AE9B /* ToDoListView.swift */,
@@ -125,10 +138,10 @@
 			children = (
 				CF7B77EC2BAC2B130029AE9B /* MainViewModel.swift */,
 				CF7B77EE2BAC2B250029AE9B /* ProfileViewModel.swift */,
-				CF7B77F02BAC2B360029AE9B /* ToDoListViewModel.swift */,
 				CF7B77F22BAC2B460029AE9B /* NewItemViewModel.swift */,
 				CF7B77F42BAC2B500029AE9B /* LoginViewModel.swift */,
 				CF7B77F62BAC2B630029AE9B /* RegisterViewModel.swift */,
+				CF7B77F02BAC2B360029AE9B /* ToDoListViewModel.swift */,
 				CF7B77F82BAC2B720029AE9B /* ToDoListItemViewModel.swift */,
 			);
 			path = ViewModels;
@@ -146,11 +159,32 @@
 		CF7B77DB2BAC29780029AE9B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CF7B78032BAC8EDD0029AE9B /* Authentication */,
 				CF7B77C52BAC22C80029AE9B /* Assets.xcassets */,
 				CF7B77D62BAC27670029AE9B /* GoogleService-Info.plist */,
 				CF7B77C12BAC22C30029AE9B /* ToDoListApp.swift */,
+				CF7B77FF2BAC87C10029AE9B /* Extentions.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		CF7B77FC2BAC2FB50029AE9B /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				CF7B77FA2BAC2F900029AE9B /* HeaderView.swift */,
+				CF7B77FD2BAC396F0029AE9B /* TLButton.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		CF7B78032BAC8EDD0029AE9B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CF7B78012BAC8E360029AE9B /* AuthenticationService.swift */,
+				CF7B78042BAC8F090029AE9B /* FirebaseAuthenticationService.swift */,
+				CF7B78062BAC901F0029AE9B /* MockAuthenticationService.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,19 +267,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7B77E32BAC2A3E0029AE9B /* LoginView.swift in Sources */,
+				CF7B77FB2BAC2F900029AE9B /* HeaderView.swift in Sources */,
 				CF7B77C42BAC22C30029AE9B /* MainView.swift in Sources */,
 				CF7B77DF2BAC2A230029AE9B /* ToDoListView.swift in Sources */,
 				CF7B77F72BAC2B630029AE9B /* RegisterViewModel.swift in Sources */,
 				CF7B77E52BAC2A480029AE9B /* RegisterView.swift in Sources */,
 				CF7B77DD2BAC2A100029AE9B /* ProfileView.swift in Sources */,
+				CF7B77FE2BAC396F0029AE9B /* TLButton.swift in Sources */,
 				CF7B77E92BAC2ADB0029AE9B /* User.swift in Sources */,
 				CF7B77EF2BAC2B250029AE9B /* ProfileViewModel.swift in Sources */,
+				CF7B78072BAC901F0029AE9B /* MockAuthenticationService.swift in Sources */,
 				CF7B77E72BAC2A7E0029AE9B /* ToDoListItemView.swift in Sources */,
 				CF7B77F92BAC2B720029AE9B /* ToDoListItemViewModel.swift in Sources */,
+				CF7B78002BAC87C10029AE9B /* Extentions.swift in Sources */,
+				CF7B78022BAC8E360029AE9B /* AuthenticationService.swift in Sources */,
 				CF7B77F52BAC2B500029AE9B /* LoginViewModel.swift in Sources */,
 				CF7B77F32BAC2B460029AE9B /* NewItemViewModel.swift in Sources */,
 				CF7B77C22BAC22C30029AE9B /* ToDoListApp.swift in Sources */,
 				CF7B77EB2BAC2AF40029AE9B /* ToDoListItem.swift in Sources */,
+				CF7B78052BAC8F090029AE9B /* FirebaseAuthenticationService.swift in Sources */,
 				CF7B77F12BAC2B360029AE9B /* ToDoListViewModel.swift in Sources */,
 				CF7B77E12BAC2A300029AE9B /* NewItemView.swift in Sources */,
 				CF7B77ED2BAC2B130029AE9B /* MainViewModel.swift in Sources */,
