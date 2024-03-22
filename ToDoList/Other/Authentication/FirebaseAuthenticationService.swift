@@ -17,6 +17,7 @@ class FirebaseAuthenticationService: AuthenticationService {
                 return
             }
             
+            // creates new user an adds to firestore db
             let newUser = User(id: userId, name: name, email: email, joined: Date().timeIntervalSince1970)
             let db = Firestore.firestore()
             db.collection("users").document(userId).setData(newUser.asDictionary()) { error in

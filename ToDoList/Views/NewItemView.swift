@@ -29,10 +29,17 @@ struct NewItemView: View {
                 
                 // button
                 TLButton(title: "Save", background: .pink) {
-                    viewModel.save()
-                    newItemPresented.toggle()
+                    if viewModel.canSave() {
+                        viewModel.save()
+                        newItemPresented.toggle()
+                    } else {
+                        viewModel.showAlert.toggle()
+                    }
                 }
                 .padding()
+            }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(title: Text("Error"), message: Text("Please fill in all fields and select a due date from today or later."))
             }
         }
     }

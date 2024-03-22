@@ -8,7 +8,7 @@
 import Foundation
 
 extension Encodable {
-    // this helps func insertUserRecord() on RegisterVM insert user into firestore db
+    // this helps to insert data into firestore db (used on newUser and newItem)
     func asDictionary() -> [String: Any] {
         guard let data = try? JSONEncoder().encode(self) else {
             return[:]
