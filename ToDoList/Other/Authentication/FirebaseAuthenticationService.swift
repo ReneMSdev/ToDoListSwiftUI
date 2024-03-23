@@ -39,4 +39,16 @@ class FirebaseAuthenticationService: AuthenticationService {
             }
         }
     }
+    
+    // function to sign out user
+    func signOut(completion: @escaping (Bool, String) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true, "")
+        } catch {
+            completion(false, error.localizedDescription)
+        }
+    }
 }
+
+
